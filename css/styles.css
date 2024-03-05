@@ -236,7 +236,7 @@ button:hover {
 
 @font-face {
   font-family: myFirstFont;
-  src: url(img/MigaeSemibold-3zd2M.otf);
+  src: url('../img/MigaeSemibold-3zd2M.otf');
 }
 
 @keyframes spin {
