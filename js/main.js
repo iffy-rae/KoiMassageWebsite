@@ -36,27 +36,12 @@ function showSection(sectionId) {
   document.getElementById(sectionId).style.display = 'block';
 }
 
-
-/*document.addEventListener("DOMContentLoaded", function() {
-  const menuItems = document.querySelectorAll("nav ul li, main section div ul li button");
-
-  menuItems.forEach(function(item) {
-    item.addEventListener("click", function(event) {
-      event.preventDefault();
-
-      const sections = document.querySelectorAll("section");
-      sections.forEach(function(section) {
-        section.style.display = "none";
-      });
-
-      let targetId;
-      if (this.tagName === 'LI') {
-        targetId = this.querySelector("a").getAttribute("href").substring(1);
-      } else if (this.tagName === 'BUTTON') {
-        targetId = this.querySelector("a").getAttribute("href").substring(1);
-      }
-
-      document.getElementById(targetId).style.display = "block";
-    });
-  });
-});*/
+function toggleStylesheet() {
+  var stylesheet = document.getElementById('stylesheet');
+  if (stylesheet.getAttribute('href') === 'css/styles.css') {
+      stylesheet.setAttribute('href', 'css/alttheme.css');
+  } 
+  else {
+      stylesheet.setAttribute('href', 'css/styles.css');
+  }
+}
