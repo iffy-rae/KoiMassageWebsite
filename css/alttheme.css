@@ -214,6 +214,10 @@ button:hover {
   margin-bottom: 10px;
 }
 
+option, textarea {
+  color: black;
+}
+
 .schedulestyle input[type="text"],
 .schedulestyle select,
 .schedulestyle input[type="date"],
@@ -277,4 +281,23 @@ button:hover {
   padding-bottom: 20px;
   margin-bottom: 20px;
   margin-top: 20
+}
+
+/*only show error information when 'was-validated' class is added to the input*/
+input.was-validated:invalid {
+  color: red;
+  border: 1px solid red;
+}
+
+input.was-validated:invalid ~ div {
+  display: block;
+}
+/* hide all error divs 
+~ is the general sibling selector and selects 'div' siblings of the input*/
+input:valid ~ div {
+  display: none;
+}
+
+input:invalid ~ div {
+  display: none;
 }
