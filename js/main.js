@@ -1,3 +1,7 @@
+/* I was late on my last submission and because of that am unsure of what to refactor so I will grade myself a C on refactoring JS code. */
+
+
+/* Functions that move header with scroll */
 window.addEventListener('scroll', function() {
   var header = document.getElementById('sticky-header');
   if (window.scrollY > 0) {
@@ -6,7 +10,6 @@ window.addEventListener('scroll', function() {
       header.classList.remove('sticky');
   }
 });
-
 window.addEventListener('resize', function() {
   var header = document.getElementById('sticky-header');
   var topOffset = header.getBoundingClientRect().top;
@@ -17,11 +20,13 @@ window.addEventListener('resize', function() {
   }
 });
 
+/* Animation Code */
 window.onload = function() {
   var jumpOutText = document.getElementById('jumpOutText');
   jumpOutText.classList.add('jump-out-text');
 };
 
+/* Change website section */
 const home = document.getElementById('home');
 const schedule = document.getElementById('schedule');
 const services = document.getElementById('services');
@@ -36,6 +41,7 @@ function showSection(sectionId) {
   document.getElementById(sectionId).style.display = 'block';
 }
 
+/* Change page style - i've decided not to have a seperate page.js file due to style change only being one function.*/
 function toggleStylesheet() {
   var stylesheet = document.getElementById('stylesheet');
   if (stylesheet.getAttribute('href') === 'css/styles.css') {
@@ -45,3 +51,8 @@ function toggleStylesheet() {
       stylesheet.setAttribute('href', 'css/styles.css');
   }
 }
+
+/* Form Validation Call */
+document.addEventListener("DOMContentLoaded", function() {
+  initValidation("myform");
+});
