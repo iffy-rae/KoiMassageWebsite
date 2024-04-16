@@ -151,8 +151,12 @@
 
     <section id="schedule">
       <h2 class = "schedulefont">Schedule an Appointment</h2>
-      <div class = "schedulestyle">
-        <form>
+      <div id="success" class="successMsg" style="display:none">
+        Thank you for scheduling with Koi Massage!
+      </div>
+
+      <form id="myform" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
+        <div class = "schedulestyle">
           <label for="appointment-type">Massage Type:</label>
           <select id="appointment-type" name="appointment-type">
             <option value="swedish">Swedish</option>
@@ -175,23 +179,62 @@
           </select>
   
           <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="first-name">
+          <input type="text" id="first-name" name="first-name" >
+          <div class="errorMsg"></div>
   
           <label for="last-name">Last Name:</label>
           <input type="text" id="last-name" name="last-name">
+          <div class="errorMsg"></div>
 
           <label for="email">Email:</label>
           <input type="text" id="email" name="email">
+          <div class="errorMsg"></div>
+
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" name="phone">
+          <div class="errorMsg"></div>
+
+          <label for="state">State (Abbreviation):</label>
+          <input type="text" id="state" name="state">
+          <div class="errorMsg"></div>
+
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city">
+          <div class="errorMsg"></div>
+
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address">
+          <div class="errorMsg"></div>
+
+          <label for="zip">Zip Code:</label>
+          <input type="text" id="zip" name="zip">
+          <div class="errorMsg"></div>
   
           <label for="preferred-day">Preferred Day:</label>
           <input type="date" id="preferred-day" name="preferred-day">
   
           <label for="preferred-time">Preferred Time:</label>
           <input type="time" id="preferred-time" name="preferred-time">
+
+          <h2>How did you find my page?</h2>
+          <div>
+            <input type="radio" id='google' name='find-page' value="google">
+            <label for="google">Google Search</label>
+
+            <input type="radio" id='friend' name='find-page' value="friend">
+            <label for="friend">Friend</label>
+
+            <input type="radio" id="other" name='find-page' value="other">
+            <label for="other">Other</label>
+          </div>
+          <div class="errorMsg"></div>
+
+          <label for="comment">Comments: </label>
+          <textarea rows="5" id="comment" placeholder="Please enter any additional comments or questions you may have:"></textarea>
   
           <input type="submit" value="Submit">
-        </form>
-      </div>
+        </div>
+      </form>
     </section>
 
     <section id="contact">
@@ -217,4 +260,5 @@
 </body>
   
 <script src="js/main.js"></script>
+<script src="js/validation.js"></script>
 </html>

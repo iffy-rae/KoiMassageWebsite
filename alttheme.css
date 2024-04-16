@@ -1,0 +1,303 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 30px;
+  color: white;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #000;
+  color: white;
+}
+
+figure {
+  display: flex;
+  align-items: center;
+}
+
+figcaption {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px;
+}
+
+main {
+  padding-top: 70px;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+ul li {
+  margin-right: 20px;
+}
+
+ol li span {
+  color: #33b9ee;
+}
+ol li {
+  margin-left: 20px;
+  list-style: circle;
+}
+ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+ul li a:hover {
+  color: rgb(95, 177, 255);
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 20px;
+  padding-top: 50px;
+  text-align: center;
+  background-color: rgb(90, 51, 126);
+}
+
+.section-container > div {
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 25px;
+}
+
+footer {
+  background-color: #d3443f;
+  color: #000;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+}
+
+h1{
+  font-size: 70px;
+  color: #d3443f;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #7cfbff;
+}
+
+h3{
+  margin-bottom: 10px;
+  font-size: 30px;
+  color: #7cff92;
+}
+
+h4{
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 12px;
+}
+
+.koipond {
+    width: 100%; 
+    height: 325px;
+    overflow: hidden;
+    position: relative;
+    border-top: solid #14394b 6px;
+    border-bottom: solid #14394b 6px;
+}
+
+.koipond img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.rockstack img {
+  position: relative;
+  left: 41.5%;
+  max-width: 100%;
+  border: solid #18485e 6px;
+}
+
+#service-grp {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 27%;
+}
+
+.button-grp {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  left: 35%;
+}
+
+.button-grp li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #2889f8;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5f2958;
+}
+
+#sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+#schedule {
+  background: rgb(90, 51, 126);
+  padding: 30px;
+}
+
+.schedulestyle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: auto;
+  margin: auto;
+  padding: 30px;
+  background: black;
+  border-radius: 7px;
+}
+
+.schedulefont {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.schedulestyle form {
+  width: 100%;
+  max-width: 400px;
+  color: black;
+}
+
+.schedulestyle label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+option, textarea {
+  color: black;
+}
+
+.schedulestyle input[type="text"],
+.schedulestyle select,
+.schedulestyle input[type="date"],
+.schedulestyle input[type="time"],
+.schedulestyle input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: black;
+}
+
+.schedulestyle input[type="submit"] {
+  background-color: #00ffbf;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url('../img/MigaeSemibold-3zd2M.otf');
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.spinning-image {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes jump-out {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.jumpOutText {
+  animation: jump-out 0.5s ease-in-out;
+}
+
+#home {
+  display: block;
+}
+
+#schedule,
+#services,
+#contact {
+  display: none;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 20
+}
+
+/*only show error information when 'was-validated' class is added to the input*/
+input.was-validated:invalid {
+  color: red;
+  border: 1px solid red;
+}
+
+input.was-validated:invalid ~ div {
+  display: block;
+}
+/* hide all error divs 
+~ is the general sibling selector and selects 'div' siblings of the input*/
+input:valid ~ div {
+  display: none;
+}
+
+input:invalid ~ div {
+  display: none;
+}
